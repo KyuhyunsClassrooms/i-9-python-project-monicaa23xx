@@ -14,7 +14,7 @@ patients = [
 def analyze_patient(patient):
     # 복합 조건 판정 (부작용 확인 -> 통증 확인)
     if patient[3] != "없음":
-        return f"🚨 [주입 중단 및 부작용 완화 약물 투여 후 재주입] 부작용({patient[3]}) 발생! PCA 잠금 및 보고"
+        return f"🚨 [주입 중단 및 부작용 완화 약물 투여 후 재주입] 부작용({patient[3]}) 발생! PCA 잠금, 주치의 보고 및 항구토제/완화제 투여 필요."
     elif patient[2] >= 4:
         return f"⚠️ [추가 주입] 통증({patient[2]}점) 높음! 추가 주입 고려"
     else:
